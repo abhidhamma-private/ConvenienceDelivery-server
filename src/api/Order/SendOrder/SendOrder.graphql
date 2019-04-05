@@ -1,0 +1,7 @@
+type SendOrderResponse {
+  ok: Boolean!
+  error: String
+}
+type Mutation {
+  SendOrder(phoneNumber: String!, message: String!): SendOrderResponse!
+}

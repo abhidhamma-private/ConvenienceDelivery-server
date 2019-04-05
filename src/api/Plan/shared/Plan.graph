@@ -1,0 +1,12 @@
+# type Plan {
+#   planId: Int
+#   thumbnail: String
+#   title: String
+#   content: String
+#   text: String
+#   image: String
+#   createdAt: String
+#   updatedAt: String
+#   detailPlans: [DetailPlan]
+#   user: User
+# }

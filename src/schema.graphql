@@ -1,0 +1,74 @@
+type SendOrderResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  SendOrder(phoneNumber: String!, message: String!): SendOrderResponse!
+  CompletePhoneVerification(phoneNumber: String!, key: String!): CompletePhoneVerificationResponse!
+  StartPhoneVerification(phoneNumber: String!): StartPhoneVerificationResponse!
+}
+
+type Order {
+  orderId: Int
+  phoneNumber: String
+  message: String
+  createdAt: String
+  updatedAt: String
+}
+
+type ProductItemResponse {
+  ok: Boolean!
+  error: String
+  product: Product
+}
+
+type Query {
+  ProductItem(productId: Int!): ProductItemResponse!
+  ProductItems: ProductItemsResponse!
+}
+
+type ProductItemsResponse {
+  ok: Boolean!
+  error: String
+  products: [Product]
+}
+
+type Category {
+  categoryId: Int
+  products: [Product]
+  name: String
+  createdAt: String
+  updatedAt: String
+}
+
+type Product {
+  productId: Int
+  category: Category
+  name: String
+  photo: String
+  price: String
+  onSale: Boolean
+  createdAt: String
+  updatedAt: String
+}
+
+type CompletePhoneVerificationResponse {
+  ok: Boolean!
+  error: String
+}
+
+type StartPhoneVerificationResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Verification {
+  id: Int!
+  target: String!
+  payload: String!
+  key: String!
+  verified: Boolean!
+  createdAt: String!
+  updateAt: String!
+}

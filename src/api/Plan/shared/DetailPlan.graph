@@ -1,0 +1,7 @@
+# type DetailPlan {
+#   detailPlanId: Int
+#   planName: String
+#   startTime: String
+#   endTime: String
+#   allDay: Boolean
+# }

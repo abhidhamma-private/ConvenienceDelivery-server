@@ -1,0 +1,7 @@
+type Order {
+  orderId: Int
+  phoneNumber: String
+  message: String
+  createdAt: String
+  updatedAt: String
+}

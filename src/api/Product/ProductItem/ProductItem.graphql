@@ -1,0 +1,9 @@
+type ProductItemResponse {
+  ok: Boolean!
+  error: String
+  product: Product
+}
+
+type Query {
+  ProductItem(productId: Int!): ProductItemResponse!
+}

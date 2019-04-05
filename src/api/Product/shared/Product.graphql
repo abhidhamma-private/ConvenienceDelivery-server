@@ -1,0 +1,10 @@
+type Product {
+  productId: Int
+  category: Category
+  name: String
+  photo: String
+  price: String
+  onSale: Boolean
+  createdAt: String
+  updatedAt: String
+}

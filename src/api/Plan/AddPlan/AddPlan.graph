@@ -1,0 +1,27 @@
+# type AddPlanResponse {
+#   ok: Boolean!
+#   error: String
+# }
+
+# input detailPlan {
+#   planName: String
+#   startTime: String
+#   endTime: String
+#   allDay: Boolean
+# }
+
+# input user {
+#   userId: Int
+# }
+
+# type Mutation {
+#   AddPlan(
+#     thumbnail: String!
+#     title: String
+#     content: String
+#     text: String
+#     image: String
+#     detailPlans: [detailPlan]
+#     user: user
+#   ): AddPlanResponse!
+# }
